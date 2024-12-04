@@ -4,8 +4,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 522814723398.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_URI=522814723398.dkr.ecr.us-east-1.amazonaws.com/restaurant-frontend-ecr
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 585768182165.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=585768182165.dkr.ecr.us-east-1.amazonaws.com/restaurant-frontend-ecr
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
 
   build:
